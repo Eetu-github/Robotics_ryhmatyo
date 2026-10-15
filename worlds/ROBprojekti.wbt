@@ -3,20 +3,25 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puckGroundSensors.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.30839420745723195 0.011115052816077706 0.951193707090055 3.07306338061301
-  position 1.6956042412605992 -0.14327398294487353 1.25044386898803
+  orientation 0.5393081821224065 -0.02228950540185872 -0.8418134369590246 3.211143335152383
+  position 1.765932993045016 -0.49650243177014525 2.1616990724413
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
-  translation 0 -0.01 0
+  translation 0 -0.07 0
+  floorAppearance Parquetry {
+    type "light strip"
+  }
 }
 Solid {
   translation 0.36 0 0
@@ -30,8 +35,8 @@ Solid {
   name "solid(12)"
 }
 Solid {
-  translation -0.00999999 -0.4 0.000169424
-  rotation 0.7071067811865475 0.7071067811865475 0 -3.139995307179586
+  translation -0.00995701 -0.400006 0.000271001
+  rotation 0.7071067811859252 0.7071067811859252 1.3267995894220895e-06 -3.139995307179586
   children [
     Shape {
       appearance Appearance {
@@ -47,7 +52,23 @@ Solid {
   name "solid(9)"
 }
 Solid {
-  translation 0.38 0.02 0
+  translation -0.41 -0.08 0
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0 0
+        }
+      }
+      geometry Box {
+        size 0.02 0.66 0.002
+      }
+    }
+  ]
+  name "solid(13)"
+}
+Solid {
+  translation 0.38 0.01 0
   children [
     Shape {
       appearance Appearance {
@@ -193,25 +214,6 @@ Solid {
     }
   ]
 }
-E-puck {
-  hidden linearVelocity_0 0.021903900089407957 -0.05170251696088704 3.4295215803455194e-05
-  hidden angularVelocity_0 0.000644942070738279 0.0017749811599697808 0.20723115916296095
-  hidden translation_1 0 0.025999999999999992 0.02
-  hidden rotation_1 0 -1 0 6.17564330812237
-  hidden linearVelocity_1 0.019780765630348893 -0.04673098857663212 -9.820348299151735e-07
-  hidden angularVelocity_1 2.3123502510449283 0.9827002789446414 0.21290449905040268
-  hidden translation_2 0 -0.026 0.02
-  hidden rotation_2 0 -1 0 3.7697943820535915
-  hidden linearVelocity_2 0.024072673128932378 -0.0567470832939442 -4.230826487766633e-06
-  hidden angularVelocity_2 2.861052783725012 1.2134264706548574 0.21664772348336722
-  translation -0.45224606065449974 0.2095498833581604 -7.257283154746448e-05
-  rotation -0.0008106765243520889 -0.0002291738670233677 0.9999996451413928 -1.1662736047318738
-  groundSensorsSlot [
-    DistanceSensor {
-      type "infra-red"
-    }
-  ]
-}
 Solid {
   translation -0.21 0.26 0
   children [
@@ -235,4 +237,23 @@ Solid {
     }
   ]
   name "solid(11)"
+}
+E-puck {
+  hidden position_0_0 41.468670886574316
+  hidden position_0_1 50.25882145411189
+  hidden linearVelocity_0 0.0019167586320971797 0.029811409763739555 -4.244168171870492e-08
+  hidden angularVelocity_0 0.00845149141574934 -0.0005433971937327884 -1.0155010245480378e-09
+  hidden rotation_1 0 1 0 3.7695590434967965
+  hidden linearVelocity_1 0.001914041643084324 0.029769152258220938 2.1747492697759684e-11
+  hidden angularVelocity_1 -1.4884575926606127 0.0957020913167114 4.2793840139407086e-08
+  hidden rotation_2 0 -1 0 0.006661003324798899
+  hidden linearVelocity_2 0.0019140416417612032 0.02976915223966456 -3.388906933142435e-11
+  hidden angularVelocity_2 -1.4884575940003975 0.09570207046744832 -4.4043170417335794e-08
+  translation 0.3826750436605519 -0.14107093176735802 -6.395608978658485e-05
+  rotation -0.00040085796115699315 0.0004274595976052836 0.999999828295579 1.5065887376215377
+  controller "roboController"
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
 }
