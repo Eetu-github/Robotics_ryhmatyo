@@ -8,24 +8,18 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5476207068907635 0.5528518176261479 0.6280656248609098 2.010362183783516
-  position 0.05855554444074432 -0.34828422496985717 2.4758761296604535
+  orientation 0.507556180586752 0.34602633397531135 -0.7890833287706659 2.1556210188599554
+  position 0.6212497967417068 1.4536296753492073 3.785666954383395
 }
 TexturedBackground {
 }
 E-puck {
-  hidden position_0_0 70.47129176255018
-  hidden position_0_1 79.97214611240105
-  hidden linearVelocity_0 0.08146143396718575 -0.004698990908729453 7.353614736397742e-07
-  hidden angularVelocity_0 8.901962727990168e-05 -0.002902062722246479 -0.001503732828300843
-  hidden rotation_1 0 -1 0 4.926931923604858
-  hidden linearVelocity_1 0.08149012054500887 -0.004703519109918459 -1.4772094494296884e-07
-  hidden angularVelocity_1 0.23509573181191434 4.074555510401354 -0.0018603941712428541
-  hidden rotation_2 0 1 0 4.5739224262460105
-  hidden linearVelocity_2 0.08140330455723005 -0.004695364468659715 -9.651516825747679e-08
-  hidden angularVelocity_2 0.23484844260652532 4.07011368285684 -0.001880770798660301
-  translation 0.005392192787047851 -0.2777872912563225 -6.401129837238853e-05
-  rotation -0.001437121087193206 -0.021314810293383068 -0.9997717807305513 0.05763002206468165
+  hidden position_0_0 608.5277338416854
+  hidden position_0_1 577.2892304944202
+  hidden rotation_1 0 1 0 5.341944352445102
+  hidden rotation_2 0 -1 0 0.7638177661017889
+  translation 0.070015 0.265313 0.000537607
+  rotation -0.0006826921487102879 0.004097195744144548 0.999991373422023 0.3306129011410234
   controller "line_followerrrr"
   groundSensorsSlot [
     DistanceSensor {
@@ -45,6 +39,7 @@ E-puck {
 TexturedBackgroundLight {
 }
 RectangleArena {
+  floorSize 2 2
   floorAppearance PBRAppearance {
     baseColorMap ImageTexture {
       url [
@@ -56,7 +51,61 @@ RectangleArena {
     roughness 1
     metalness 0
     textureTransform TextureTransform {
+      center 1 1
       scale 0.5 0.5
     }
+  }
+}
+Solid {
+  translation 0.44 0 0.07456
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "este 1"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+}
+Solid {
+  translation -0.31 0.17 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Cone {
+        bottomRadius 0.1
+        height 0.5
+      }
+    }
+  ]
+  name "este 3"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.05
+  }
+}
+Solid {
+  translation -0.12 -0.28 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.406775 1 0.369085
+      }
+      geometry Cylinder {
+        height 0.1
+        radius 0.05
+      }
+    }
+  ]
+  name "este 2"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.05
   }
 }
