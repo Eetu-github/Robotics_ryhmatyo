@@ -1,4 +1,4 @@
-# Robotiikka - Projektiraportti – Viivaa seuraava robotti esteiden tunnistuksella
+#  Viivaa seuraava robotti esteiden tunnistuksella
 
 Ryhmä: Line trackers, jäsenet: Marjut Jussila, Eetu Salonen ja Emilia Vanhala
 
@@ -135,17 +135,7 @@ Suurin haaste projektissa oli ehdottomasti tilakoneen logiikan suunnittelu ja im
 
 Projektin kautta ryhmämme pääsi kokeilemaan, kuinka kurssilla käsitellyt aihepiirit toimivat käytännössä. Uudesta käyttöympäristöstä ja aihepiiristä johtuen projektimme käyttäytyi usein odottamattomasti, jolloin ryhmämme tuli joutui järjestelmällisesti jäljittämään virheitä. Vaikka työnteko sisälsi useita debuggaus-sessioita, tämä projekti opetti ryhmällemme konkreettisesti, mitä toimivan robotin suunnittelu- ja implementointiprosessi pitää sisällään.
 
-
-### 4.1 Ryhmän jäsenten työnjako
-
-|                |                                                                                                                                                            |                     |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| **Nimi**       | **Työpanos**                                                                                                                                               | **Käytetyt tunnit** |
-| Marjut Jussila | - Webots-maailman ja robotin rakentaminen<br>- Kontrollikoodin kirjoittaminen<br>- Debuggaus<br>- Hienosäätö<br>- Projektin esittely harjoituksissa        | 12h                 |
-| Emilia Vanhala | - Robotin alkuperäisen radan rakentaminen ja esteiden lisääminen ml. taustatietojen hankkiminen<br>- Projektiraportin tekstiosuudet ja kuvakaappaukset<br> | n. 8 h              |
-| Eetu Salonen   | - Robotin koodin tekeminen<br>- Robotin esteiden väistäminen<br>- Nykyisen radan esteiden lisääminen                                                       | n. 15h              |
 ### 4.2 Arvosana
-arvosanaehdotus: 4
 
 - Projekti sisältää yksinkertaisemman perusominaisuuden (viivanseuranta)
 - Projekti sisältää ja toteuttaa edistyneemmän ominaisuuden (automaattinen esteenkierto seinänseurannalla, paluutila, häiriöiden suodatus)
